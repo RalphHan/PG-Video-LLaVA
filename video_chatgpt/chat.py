@@ -3,7 +3,7 @@ from video_chatgpt.video_conversation import (default_conversation)
 from video_chatgpt.video_conversation import load_video
 from video_chatgpt.video_conversation import conv_templates, SeparatorStyle
 from video_chatgpt.model.utils import KeywordsStoppingCriteria
-from video_chatgpt.audio_transcript.transcribe import Transcriber
+# from video_chatgpt.audio_transcript.transcribe import Transcriber
 
 from video_chatgpt.utils import disable_torch_init
 from video_chatgpt.eval.model_utils import initialize_model
@@ -48,8 +48,8 @@ class VideoChatGPTInterface:
         self.video_path = None
         self.video_frames_pil = None
         self.transcript_text=None
-        if self.use_asr:
-            self.transcript_model = Transcriber()
+        # if self.use_asr:
+        #     self.transcript_model = Transcriber()
         
     def clear_history(self):
         self.state = default_conversation.copy()
